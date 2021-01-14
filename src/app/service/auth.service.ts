@@ -27,8 +27,8 @@ export class AuthService {
   }
 
   // tslint:disable-next-line:typedef
-  login(username: string, password: string) {
-    return this.http.post(API_URL + '/login', {username, password})
+  login(inputUser: User) {
+    return this.http.post(API_URL + '/login', inputUser)
       .pipe(map(user => {
         localStorage.setItem('user', JSON.stringify(user));
         this.currentUserSubject.next(user);
