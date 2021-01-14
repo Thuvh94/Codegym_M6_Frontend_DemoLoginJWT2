@@ -55,4 +55,19 @@ export class LoginComponent implements OnInit {
       });
   }
 
+  // tslint:disable-next-line:typedef
+  createNewUser() {
+    let newUserName: User;
+    console.log(this.newFormUser);
+    console.log(this.newFormUser.value);
+    newUserName = this.newFormUser.value;
+    console.log(this.newFormUser);
+    console.log(newUserName.username);
+    this.authService.signup(newUserName).subscribe(() => {
+      alert('Thêm thành công');
+    }, error => {
+      alert(console.log(this.authService.signup(newUserName).subscribe()));
+    });
+  }
+
 }
