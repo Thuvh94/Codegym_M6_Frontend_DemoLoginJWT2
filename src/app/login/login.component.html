@@ -24,9 +24,6 @@
             <div class="sign-up-htm">
               <form [formGroup]="newFormUser" (ngSubmit)="createNewUser()">
                 <div class="group">
-                  <!--                  <label for="user" class="label">Username</label>-->
-                  <!--                  <input type="text" id="firstname" name="firstname" placeholder="Enter username..."-->
-                  <!--                         title="Please enter your First Name" required="" class="input">-->
                   <input type="text" id="username" formControlName="username" placeholder="Username"
                          title="Please enter your First Name" required="" class="input">
                 </div>
@@ -52,29 +49,7 @@
                   <input type="submit" class="button" value="Register">
                 </div>
               </form>
-<!--              <script type="text/javascript">-->
-<!--                window.onload = function () {-->
-<!--                  document.getElementById("password").onchange = validatePassword;-->
-<!--                  document.getElementById("password2").onchange = validatePassword;-->
-<!--                }-->
 
-<!--                function validatePassword() {-->
-<!--                  var pass2 = document.getElementById("password2").value;-->
-<!--                  var pass1 = document.getElementById("password").value;-->
-<!--                  if (pass1 != pass2)-->
-<!--                    document.getElementById("password2").setCustomValidity("Passwords do not match!");-->
-<!--                  else-->
-<!--                    document.getElementById("password2").setCustomValidity('');-->
-<!--                  //empty string means no validation error-->
-<!--                }-->
-<!--              </script>-->
-              <!--              <p class="wthree w3l">Fast Signup With Your Favourite Social Profile</p>-->
-<!--              <ul class="social-agileinfo wthree2">-->
-<!--                <li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
-<!--                <li><a href="#"><i class="fa fa-youtube"></i></a></li>-->
-<!--                <li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
-<!--                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>-->
-<!--              </ul>-->
             </div>
             <div class="sign-in-htm">
 
@@ -90,7 +65,7 @@
                 </div>
                 <div class="group">
                   <input id="check" type="checkbox" class="check" checked>
-                  <!--                <label for="check"><span class="icon"></span> Keep me Signed in</label>-->
+
                 </div>
                 <div class="group">
                   <input type="submit" class="button" value="Sign In">
