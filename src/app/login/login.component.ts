@@ -12,8 +12,8 @@ import {FormBuilder, FormGroup} from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  newFromUser: FormGroup;
-  newFromLogin: FormGroup;
+  newFormUser: FormGroup;
+  newFormLogin: FormGroup;
 
   currentUser: UserToken;
   user: User = {
@@ -25,11 +25,21 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router,
               private activatedRoute: ActivatedRoute,
               private authService: AuthService,
-              private formBuilder: FormBuilder,) {
+              private formBuilder: FormBuilder) {
     this.authService.currentUser.subscribe(value => this.currentUser = value);
   }
 
   ngOnInit() {
+    this.newFormUser = this.formBuilder.group({
+      username: [''],
+      password: [''],
+      // confirmPassword: [''],
+      phone: ['']
+    });
+    this.newFormLogin = this.formBuilder.group({
+      username: [''],
+      password: ['']
+    });
     this.returnUrl = this.activatedRoute.snapshot.queryParams.returnUrl || '/';
   }
 
