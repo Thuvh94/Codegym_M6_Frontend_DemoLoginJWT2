@@ -5,6 +5,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import {UserToken} from '../model/user-token';
 import {HttpClient} from '@angular/common/http';
 import {map} from 'rxjs/operators';
+import {User} from '../model/user';
 const API_URL = `${environment.apiUrl}`;
 @Injectable({
   providedIn: 'root'
@@ -40,5 +41,9 @@ export class AuthService {
   logout() {
     localStorage.removeItem('user');
     this.currentUserSubject.next(null);
+  }
+
+  signup(user: User): Observable<User> {
+    return this.http.post<User>(API_URL + '/signup', user);
   }
 }

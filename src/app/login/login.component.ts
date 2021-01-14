@@ -4,6 +4,7 @@ import {User} from '../model/user';
 import {ActivatedRoute, Router} from '@angular/router';
 import {AuthService} from '../service/auth.service';
 import {first} from 'rxjs/operators';
+import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +12,9 @@ import {first} from 'rxjs/operators';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  newFromUser: FormGroup;
+  newFromLogin: FormGroup;
+
   currentUser: UserToken;
   user: User = {
     username: '',
@@ -20,7 +24,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router,
               private activatedRoute: ActivatedRoute,
-              private authService: AuthService) {
+              private authService: AuthService,
+              private formBuilder: FormBuilder,) {
     this.authService.currentUser.subscribe(value => this.currentUser = value);
   }
 
