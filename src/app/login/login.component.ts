@@ -16,10 +16,10 @@ export class LoginComponent implements OnInit {
   newFormLogin: FormGroup;
 
   currentUser: UserToken;
-  user: User = {
-    username: '',
-    password: ''
-  };
+  // user: User = {
+  //   username: '',
+  //   password: ''
+  // };
   returnUrl = '';
 
   constructor(private router: Router,

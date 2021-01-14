@@ -16,7 +16,7 @@
           <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
           <div class="login-form">
             <div class="sign-up-htm">
-              <form [formGroup]="newFromUser" (ngSubmit)="createNewUser()">
+              <form [formGroup]="newFormUser" (ngSubmit)="createNewUser()">
                 <div class="group">
                   <!--                  <label for="user" class="label">Username</label>-->
                   <!--                  <input type="text" id="firstname" name="firstname" placeholder="Enter username..."-->
@@ -25,13 +25,13 @@
                          title="Please enter your First Name" required="" class="input">
                 </div>
 
-                <div class="group">
+<!--                <div class="group">-->
                   <!--                  <label for="user" class="label">Email</label>-->
                   <!--                  <input type="email" id="email" name="email" placeholder="Enter email..."-->
                   <!--                         title="Please enter a valid email" required="" class="input">-->
-                  <input type="email" id="email" formControlName="email" placeholder="mail@example.com"
-                         title="Please enter a valid email" required="" class="input">
-                </div>
+<!--                  <input type="email" id="email" formControlName="email" placeholder="mail@example.com"-->
+<!--                         title="Please enter a valid email" required="" class="input">-->
+<!--                </div>-->
 
                 <div class="group">
                   <!--                  <label for="user" class="label">Phone Number</label>-->
@@ -40,16 +40,16 @@
                   <input type="text" class="lock" formControlName="phone" placeholder="Phone" id="phone" required=""
                          class="input">
                 </div>
-                <div class="group">
+<!--                <div class="group">-->
                   <!--                  <label for="user" class="label">Address</label>-->
-                  <input type="text" class="lock" formControlName="address" placeholder="Address" id="address"
-                         required="" class="input">
-                </div>
-                <div class="group">
+<!--                  <input type="text" class="lock" formControlName="address" placeholder="Address" id="address"-->
+<!--                         required="" class="input">-->
+<!--                </div>-->
+<!--                <div class="group">-->
                   <!--                  <label for="user" class="label">FullName</label>-->
-                  <input type="text" class="lock" formControlName="fullName" placeholder="fullName" id="fullName"
-                         required="" class="input">
-                </div>
+<!--                  <input type="text" class="lock" formControlName="fullName" placeholder="fullName" id="fullName"-->
+<!--                         required="" class="input">-->
+<!--                </div>-->
                 <div class="group">
                   <!--                  <label for="user" class="label">Password</label>-->
                   <input type="password" name="password" formControlName="password" placeholder="Password..."
@@ -94,7 +94,7 @@
             </div>
             <div class="sign-in-htm">
 
-              <form [formGroup]="newFromLogin" (ngSubmit)="login()">
+              <form [formGroup]="newFormLogin" (ngSubmit)="login()">
                 <div class="group">
                   <!--                <label for="user" class="label">Username</label>-->
                   <input id="user" type="text" class="input" formControlName="username" placeholder="Enter username...">
