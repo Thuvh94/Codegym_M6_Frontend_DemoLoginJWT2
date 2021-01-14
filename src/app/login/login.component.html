@@ -1,4 +1,5 @@
-
+<!--<script src="https://apis.google.com/js/platform.js" async defer></script>-->
+<!--<meta name="google-signin-client_id" content="360187321088-pphmdafbluqev38ctadkfvj02v7n346p.apps.googleusercontent.com.apps.googleusercontent.com">-->
 <body>
 <div class="title">
   <h1 class="w3ls">Welcome to AirBnB</h1>
@@ -42,7 +43,7 @@
                 </div>
 
                 <div class="group">
-                  <input type="password" name="confirm-password" placeholder="Confirm password..."
+                  <input type="password" name="confirm-password" formControlName="confirmPassword" placeholder="Confirm password..."
                          id="password2"
                          required="" class="input">
                 </div>
@@ -51,22 +52,22 @@
                   <input type="submit" class="button" value="Register">
                 </div>
               </form>
-              <script type="text/javascript">
-                window.onload = function () {
-                  document.getElementById("password").onchange = validatePassword;
-                  document.getElementById("password2").onchange = validatePassword;
-                }
+<!--              <script type="text/javascript">-->
+<!--                window.onload = function () {-->
+<!--                  document.getElementById("password").onchange = validatePassword;-->
+<!--                  document.getElementById("password2").onchange = validatePassword;-->
+<!--                }-->
 
-                function validatePassword() {
-                  var pass2 = document.getElementById("password2").value;
-                  var pass1 = document.getElementById("password").value;
-                  if (pass1 != pass2)
-                    document.getElementById("password2").setCustomValidity("Passwords do not match!");
-                  else
-                    document.getElementById("password2").setCustomValidity('');
-                  //empty string means no validation error
-                }
-              </script>
+<!--                function validatePassword() {-->
+<!--                  var pass2 = document.getElementById("password2").value;-->
+<!--                  var pass1 = document.getElementById("password").value;-->
+<!--                  if (pass1 != pass2)-->
+<!--                    document.getElementById("password2").setCustomValidity("Passwords do not match!");-->
+<!--                  else-->
+<!--                    document.getElementById("password2").setCustomValidity('');-->
+<!--                  //empty string means no validation error-->
+<!--                }-->
+<!--              </script>-->
               <!--              <p class="wthree w3l">Fast Signup With Your Favourite Social Profile</p>-->
 <!--              <ul class="social-agileinfo wthree2">-->
 <!--                <li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
@@ -94,6 +95,7 @@
                 <div class="group">
                   <input type="submit" class="button" value="Sign In">
                 </div>
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
                 <div class="hr"></div>
                 <div class="foot-lnk">
                   <a href="#forgot">Forgot Password?</a>
