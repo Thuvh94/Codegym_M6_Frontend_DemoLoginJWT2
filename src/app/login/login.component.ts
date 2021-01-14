@@ -43,8 +43,12 @@ export class LoginComponent implements OnInit {
     this.returnUrl = this.activatedRoute.snapshot.queryParams.returnUrl || '/';
   }
 
+  // tslint:disable-next-line:typedef
   login() {
-    this.authService.login(this.user.username, this.user.password)
+    // tslint:disable-next-line:prefer-const
+    let loginUser: User;
+    loginUser = this.newFormLogin.value;
+    this.authService.login(loginUser)
       .pipe(first())
       .subscribe(data => {
         this.router.navigate([this.returnUrl]);
