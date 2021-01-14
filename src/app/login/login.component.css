@@ -130,28 +130,28 @@ p.agileits2 {
   float: left;
   padding: 25px 0 0;
 }
-input#firstname,input#email,input#password1,input#password2 {
-  width:300px;
-  height:50px;
-  padding:0 15px;
-  color:#fff;
-  font-size:17px;
-  font-weight:200;
-  background-color:transparent;
-  /*-- w3layouts --*/
-  border-bottom:5px solid #fff;
-  border-top-color:transparent;
-  border-left-color:transparent;
-  border-right-color:transparent;
-  font-family: 'Raleway', sans-serif;
-  margin:0 auto 20px;
-  display:block;
-  outline:none;
-}
-input#firstname:focus,input#email:focus,input#password1:focus,input#password2:focus,input#firstname:hover,input#email:hover,input#password1:hover,input#password2:hover {
-  color:#fff;
-  border-bottom:5px solid #3970b0;
-}
+/*input#firstname,input#email,input#password1,input#password2 {*/
+/*  width:300px;*/
+/*  height:50px;*/
+/*  padding:0 15px;*/
+/*  color:#fff;*/
+/*  font-size:17px;*/
+/*  font-weight:200;*/
+/*  background-color:transparent;*/
+/*  !*-- w3layouts --*!*/
+/*  border-bottom:5px solid #fff;*/
+/*  border-top-color:transparent;*/
+/*  border-left-color:transparent;*/
+/*  border-right-color:transparent;*/
+/*  font-family: 'Raleway', sans-serif;*/
+/*  margin:0 auto 20px;*/
+/*  display:block;*/
+/*  outline:none;*/
+/*}*/
+/*input#firstname:focus,input#email:focus,input#password1:focus,input#password2:focus,input#firstname:hover,input#email:hover,input#password1:hover,input#password2:hover {*/
+/*  color:#fff;*/
+/*  border-bottom:5px solid #3970b0;*/
+/*}*/
 input::-webkit-input-placeholder {
   color: #fff !important;
 }
@@ -255,9 +255,9 @@ p.copyright a:hover {
     font-size: 14px;
   }
 
-  input#firstname, input#email, input#password1, input#password2 {
-    font-size:15px;
-  }
+  /*input#firstname, input#email, input#password1, input#password2 {*/
+  /*  font-size:15px;*/
+  /*}*/
 }
 
 @media (max-width: 1024px) {
@@ -277,9 +277,9 @@ p.copyright a:hover {
 }
 
 @media (max-width: 800px) {
-  input#firstname, input#email, input#password1, input#password2 {
-    width: 260px;
-  }
+  /*input#firstname, input#email, input#password1, input#password2 {*/
+  /*  width: 260px;*/
+  /*}*/
   input.register {
     width: 295px;
   }
@@ -345,10 +345,10 @@ p.copyright a:hover {
 }
 
 @media (max-width: 384px) {
-  input#firstname, input#email, input#password1, input#password2 {
-    width: 230px;
-    height: 40px;
-  }
+  /*input#firstname, input#email, input#password1, input#password2 {*/
+  /*  width: 230px;*/
+  /*  height: 40px;*/
+  /*}*/
   input.register {
     width: 260px;
     height:45px;
@@ -392,11 +392,11 @@ p.copyright a:hover {
   p.agileits2 {
     font-size: 13px;
   }
-  input#firstname, input#email, input#password1, input#password2 {
-    width: 195px;
-    height: 40px;
-    font-size: 14px;
-  }
+  /*input#firstname, input#email, input#password1, input#password2 {*/
+  /*  width: 195px;*/
+  /*  height: 40px;*/
+  /*  font-size: 14px;*/
+  /*}*/
   .content-w3ls {
     width: 90%;
     margin: 0 auto;
