@@ -10,7 +10,11 @@
       <p class="agileits2">Your New Home!</p>
     </div>
     <div class="content-agile2">
+
       <div class="login-wrap">
+        <div *ngIf="message" class="alert alert-warning" role="alert">
+          {{message}}
+        </div>
         <div class="login-html">
           <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign
           In</label>

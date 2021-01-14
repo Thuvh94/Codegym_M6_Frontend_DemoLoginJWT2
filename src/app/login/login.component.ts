@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {UserToken} from '../model/user-token';
 import {User} from '../model/user';
 import {ActivatedRoute, Router} from '@angular/router';
@@ -14,13 +14,9 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 export class LoginComponent implements OnInit {
   newFormUser: FormGroup;
   newFormLogin: FormGroup;
-
   currentUser: UserToken;
-  // user: User = {
-  //   username: '',
-  //   password: ''
-  // };
   returnUrl = '';
+  message: string;
 
   constructor(private router: Router,
               private activatedRoute: ActivatedRoute,
@@ -51,23 +47,29 @@ export class LoginComponent implements OnInit {
     this.authService.login(loginUser)
       .pipe(first())
       .subscribe(data => {
-        this.router.navigate([this.returnUrl]);
-      });
+          console.log('thành công');
+          this.router.navigate([this.returnUrl]); // navigate sau khi login
+      }, error => {
+        this.message = 'Incorrect username or password';
+        console.log('unauthorized');
+        }
+      );
   }
 
-  // tslint:disable-next-line:typedef
-  createNewUser() {
-    let newUserName: User;
-    console.log(this.newFormUser);
-    console.log(this.newFormUser.value);
-    newUserName = this.newFormUser.value;
-    console.log(this.newFormUser);
-    console.log(newUserName.username);
-    this.authService.signup(newUserName).subscribe(() => {
-      alert('Thêm thành công');
-    }, error => {
-      alert(console.log(this.authService.signup(newUserName).subscribe()));
-    });
-  }
+
+// tslint:disable-next-line:typedef
+createNewUser() {
+  let newUserName: User;
+  console.log(this.newFormUser);
+  console.log(this.newFormUser.value);
+  newUserName = this.newFormUser.value;
+  console.log(this.newFormUser);
+  console.log(newUserName.username);
+  this.authService.signup(newUserName).subscribe(() => {
+    alert('Thêm thành công');
+  }, error => {
+    alert(console.log(this.authService.signup(newUserName).subscribe()));
+  });
+}
 
 }
