@@ -1,4 +1,3 @@
-<body>
 <div class="title">
   <h1 class="w3ls">Welcome to AirBnB</h1>
 </div>
@@ -68,7 +67,15 @@
                 <div class="group">
                   <input type="submit" class="button" value="Sign In">
                 </div>
-                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+                <div class="social-auth-links text-center mb-3">
+                  <p>- OR -</p>
+                  <a (click)="loginGoogle()" id="googleBtn" style="color: white" class="g-signin2 btn btn-block btn-danger">
+                    <i class="fab fa-google-plus mr-2"></i>
+                    Đăng nhập với Google
+                  </a>
+                </div>
+
                 <div class="hr"></div>
                 <div class="foot-lnk">
                   <a href="#forgot">Forgot Password?</a>
@@ -84,4 +91,3 @@
       href="https://w3layouts.com/" target="_blank">W3layouts</a></p>
   </div>
 </div>
-</body>
