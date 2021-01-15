@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
       password: ['']
     });
     this.returnUrl = this.activatedRoute.snapshot.queryParams.returnUrl || '/';
-     }
+  }
 
   // tslint:disable-next-line:typedef
   login() {
@@ -65,10 +65,10 @@ export class LoginComponent implements OnInit {
   // tslint:disable-next-line:typedef
   createNewUser() {
     // tslint:disable-next-line:triple-equals
-   if (this.newFormUser.value.password != this.newFormUser.value.confirmPassword){
-     alert('Password and confirm password must match!');
-   }
-    // this.submitted = true;
+    if (this.newFormUser.value.password != this.newFormUser.value.confirmPassword){
+      alert('Password and confirm password must match!');
+    }
+      // this.submitted = true;
     // stop here if form is invalid
     else if (this.newFormUser.valid) {
       let newUserName: User;

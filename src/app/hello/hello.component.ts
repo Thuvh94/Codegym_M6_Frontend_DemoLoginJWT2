@@ -7,7 +7,7 @@ import {User} from '../model/user';
   styleUrls: ['./hello.component.css']
 })
 export class HelloComponent implements OnInit {
-  private user: User;
+  public user: User;
   constructor() { }
 
   ngOnInit(): void {
